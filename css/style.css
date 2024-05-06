@@ -249,6 +249,11 @@ img {
   margin-right: 0;
 }
 
+.footer :nth-child(3) a {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.4rem;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 768px) {
   .navbar {
