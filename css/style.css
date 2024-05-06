@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root {
+  --primary-font: 'Open Sans', sans-serif;
+
+  --primary-color: #28a745;
+  --secondary-color: #0284d0;
+  --dark-color: #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+  background-color: #fff;
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+img {
+  width: 100%;
+}
+
+/* HEADER - NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--dark-color);
+  color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 7rem;
+  position: fixed;
+  top: 0;
+  padding: 0 3rem;
+  transition: 0.5s;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 1rem 2rem;
+  margin: 0 0.5rem;
+}
+
+.navbar a:hover {
+  border-bottom: 0.2rem solid var(--primary-color);
+}
+
+.navbar .logo {
+  font-weight: 400;
+}
+
+/* NAVBAR TOP */
+.navbar.top {
+  background-color: transparent;
+}
+
+/* HEADER - HERO */
+.hero {
+  background-image: url('../images/home/showcase.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  color: #fff;
+}
+
+.hero .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+  padding: 0 2rem;
+}
+
+.hero .content h1 {
+  font-size: 5.5rem;
+}
+
+.hero .content p {
+  font-size: 2.3rem;
+  max-width: 60rem;
+  margin: 2rem 0 3rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero * {
+  z-index: 10;
+}
+
+/* BLOG PAGE */
+.hero.blog {
+  background-image: url('../images/home/blog.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50vh;
+}
+
+.post {
+  padding: 5rem 3rem;
+}
+
+.post h2 {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.1rem solid #ccc;
+}
+
+.post .meta {
+  margin-bottom: 3rem;
+}
+
+.post img {
+  width: 30rem;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 3rem;
+}
+/* ABOUT: ICONS SECTION */
+.icons {
+  padding: 3rem;
+}
+
+.icons h3 {
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.icons i {
+  background-color: var(--primary-color);
+  color: #fff;
+  padding: 1.6rem;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+/* CASES SECTION */
+.cases img:hover {
+  opacity: 0.7;
+}
+
+/* TEAM SECTION */
+.team img {
+  border-radius: 50%;
+}
+
+/* CONTACT SECTION */
+.callback-form {
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.callback-form .form-control {
+  margin-bottom: 1.5rem;
+}
+
+.callback-form input {
+  width: 100%;
+  padding: 0.4rem;
+  height: 4rem;
+  border: 0.1rem solid #f5f5f5;
+}
+
+.callback-form input:focus {
+  outline-color: var(--primary-color);
+}
+.callback-form .btn {
+  padding: 1.2rem 0;
+  margin-top: 2rem;
+}
+
+/* FOOTER SECTION */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 20rem;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: var(--primary-color);
+}
+
+.footer .social > * {
+  margin-right: 3rem;
+}
+
+.footer .social > *:last-child {
+  margin-right: 0;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 12rem;
+    padding: 2rem;
+  }
+
+  .navbar a {
+    padding: 1rem 1rem;
+    margin: 0 0.3rem;
+  }
+
+  .flex-items {
+    flex-direction: column;
+  }
+
+  .flex-columns .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .flex-grid .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .team img {
+    width: 70%;
+  }
+}
