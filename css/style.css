@@ -238,7 +238,7 @@ img {
 }
 
 .footer a:hover {
-  color: var(--primary-color);
+  color: #333;
 }
 
 .footer .social > * {
@@ -250,7 +250,9 @@ img {
 }
 
 .footer :nth-child(3) a {
-  background-color: rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  background-color: var(--primary-color);
+  border-radius: 2rem;
   padding: 0.4rem;
 }
 
